@@ -17,6 +17,6 @@ public class EmployeeController {
 	@RequestMapping
 	public String viewHomePage(Model model) {
 		model.addAttribute("listEmployees", employeeService.getAllEmployees());
-		return "index"; //index = thymeleaf template!
+		return "inicio"; //index = thymeleaf template!
 	}
 }

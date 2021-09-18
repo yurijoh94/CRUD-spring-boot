@@ -2,9 +2,28 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Tela de inicio</title>
+<title>Employee Management System</title>
 </head>
 <body>
-<h1>Inicio</h1>
+
+	<div align="center">
+		<h1>Employee List</h1>
+		<table border= "1">
+			<thead>
+				<tr>
+					<th>Employee first name</th>
+					<th>Employee last name</th>
+					<th>Employee email</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="employee : ${ListEmployees}">
+					<td th:text="S{employee.firstName}"></td>
+					<td th:text="S{employee.lastName}"></td>
+					<td th:text="S{employee.email}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </body>
 </html>
